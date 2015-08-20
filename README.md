@@ -31,3 +31,7 @@ $ cmake -DCMAKE_TOOLCHAIN_FILE=$AVR_COMMON/gcc-avr.cmake ..
 $ make
 $ make flash
 ```
+
+## AVR Definitions and Functions
+
+#### [busy-wait delay loops](http://www.nongnu.org/avr-libc/user-manual/group__util__delay.html)
