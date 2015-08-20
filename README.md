@@ -3,6 +3,7 @@
 #### [GENIUS KIT STARTER PACK](http://kocoafab.cc/product/genius)
 #### ATmega328P pin mapping
 ![ATmega328P pin mapping](ATmega328P_vs_Arduino_pin_mapping.png)
+#### [Loading an Arduino Bootloader](http://blog.allthingsgeek.com/article/index/index/id/27#.VdWlNXWlxBc)
 
 ## AVRDUDE
 
