@@ -4,16 +4,16 @@
 int main(void) {
 
 	// Inits
-	DDRD |= 0b00000001;		/* Data Direction Register D:
+	DDRB |= 0b00000001;		/* Data Direction Register D:
 							   writing a one to the bit
 							   enables output. */
 
 	// Event loop
 	while (1) {
-		PORTD = 0b00000001;		/* Turn on first LED bit/pin in PORTD */
+		PORTB = 0b00000001;		/* Turn on first LED bit/pin in PORTD */
 		_delay_ms(1000);									/* wait */
 
-		PORTD = 0b00000000;		/* Turn off all D pins, including LED */
+		PORTB = 0b00000000;		/* Turn off all D pins, including LED */
 		_delay_ms(1000);									/* wait */
 
 	}
