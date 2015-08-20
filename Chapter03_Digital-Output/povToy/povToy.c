@@ -3,28 +3,28 @@
 
 
 void POVDisplay(uint8_t oneByte) {
-	PORTB = oneByte;
+	PORTD = oneByte;
 	_delay_ms(2);
 }
 
 int main(void) {
 
-	DDRB = 0x3f;	/* Set up all of LED pins for output */
+	DDRD = 0xff;	/* Set up all of LED pins for output */
 
 	while(1) {
-		POVDisplay(0b001110);
-		POVDisplay(0b011000);
-		POVDisplay(0b111101);
-		POVDisplay(0b110110);
-		POVDisplay(0b111100);
-		POVDisplay(0b111100);
-		POVDisplay(0b111100);
-		POVDisplay(0b110110);
-		POVDisplay(0b111101);
-		POVDisplay(0b011000);
-		POVDisplay(0b001110);
+		POVDisplay(0b00001110);
+		POVDisplay(0b00011000);
+		POVDisplay(0b10111101);
+		POVDisplay(0b01110110);
+		POVDisplay(0b00111100);
+		POVDisplay(0b00111100);
+		POVDisplay(0b00111100);
+		POVDisplay(0b01110110);
+		POVDisplay(0b10111101);
+		POVDisplay(0b00011000);
+		POVDisplay(0b00001110);
 
-		PORTB = 0;
+		PORTD = 0;
 		_delay_ms(10);
 
 	}
