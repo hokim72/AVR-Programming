@@ -8,7 +8,7 @@ set(C_STANDARD gnu99 CACHE STRING "")
 set(PROG_TYPE arduino)
 set(PROG_ARGS -P /dev/ttyUSB0 -b 115200)
 
-set(TARGET blinkLED)
+set(TARGET povToy)
 
 set(CPP_FLAGS "-DF_CPU=${F_CPU} -mmcu=${MCU}")
 set(C_FLAGS "-O${OPTIMIZATION} -g -std=${C_STANDARD} -Wall -funsigned-char -funsigned-bitfields -fpack-struct -fshort-enums -ffunction-sections -fdata-sections")
