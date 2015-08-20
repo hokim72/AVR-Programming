@@ -4,6 +4,7 @@
 #### ATmega328P pin mapping
 ![ATmega328P pin mapping](ATmega328P_vs_Arduino_pin_mapping.png)
 #### [Loading an Arduino Bootloader](http://blog.allthingsgeek.com/article/index/index/id/27#.VdWlNXWlxBc)
+#### [Arduino Schematic](https://www.arduino.cc/en/uploads/Main/Arduino_Uno_Rev3-schematic.pdf)
 
 ## AVRDUDE
 
