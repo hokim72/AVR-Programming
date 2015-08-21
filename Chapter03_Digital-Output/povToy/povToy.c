@@ -4,7 +4,7 @@
 
 void POVDisplay(uint8_t oneByte) {
 	PORTD = oneByte;
-	_delay_ms(2);
+	_delay_ms(200);
 }
 
 int main(void) {
@@ -25,7 +25,7 @@ int main(void) {
 		POVDisplay(0b00001110);
 
 		PORTD = 0;
-		_delay_ms(10);
+		_delay_ms(1000);
 
 	}
 	return (0);

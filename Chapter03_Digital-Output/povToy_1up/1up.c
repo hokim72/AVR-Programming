@@ -1,6 +1,6 @@
 #include <avr/io.h>
 #include <util/delay.h>
-#define DELAYTIME 2
+#define DELAYTIME 200
 
 
 uint8_t Star1UP[] = {
