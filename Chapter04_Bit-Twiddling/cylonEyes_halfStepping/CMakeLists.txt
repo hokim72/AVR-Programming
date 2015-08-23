@@ -1,9 +1,9 @@
 cmake_minimum_required(VERSION 3.1)
 
-set(MCU atmega328p CACHE STRING "Microcontroller device model name")
-set(F_CPU 16000000UL CACHE STRING "Speed of the CPU, in Hz")
-set(OPTIMIZATION s CACHE STRING "OPTIMIZATION")
-set(C_STANDARD gnu99 CACHE STRING "")
+set(MCU atmega328p)
+set(F_CPU 16000000UL)
+set(OPTIMIZATION s)
+set(C_STANDARD gnu99)
 
 set(PROG_TYPE arduino)
 set(PROG_ARGS -P /dev/ttyUSB0 -b 115200)
