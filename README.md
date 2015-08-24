@@ -27,8 +27,7 @@ $ sudo usermod -a -G dialout hokim
 $ cd ~/work/avr
 $ git clone https://github.com/hokim72/AVR-Programming.git
 $ mkdir AVR-Programming/project_dir/build; cd AVR-Programming/project_dir/build
-$ cmake -DCMAKE_TOOLCHAIN_FILE=$AVR_COMMON/gcc-avr.cmake ..
-$ make
+$ cmake-avr ..
 $ make flash
 ```
 
