@@ -3,7 +3,7 @@
 #### [GENIUS KIT STARTER PACK](http://kocoafab.cc/product/genius)
 #### ATmega328P pin mapping
 ![ATmega328P pin mapping](ATmega328P_vs_Arduino_pin_mapping.png)
-#### [Arduino Schematic](https://www.arduino.cc/en/uploads/Main/ArduinoNano30Schematic.pdf)
+#### [Arduino Schematic](https://github.com/NashMicro/NashDuino/tree/master/Nano)
 #### Arduino Bootloader
 Arduino/hardware/arduino/avr/bootloaders/optiboot from [Arduino](https://github.com/arduino-org/Arduino)
 #### [Fuse settings](http://www.martyncurrey.com/arduino-atmega-328p-fuse-settings/)
