@@ -24,8 +24,3 @@ $ mkdir AVR-Programming/project_dir/build; cd AVR-Programming/project_dir/build
 $ cmake-avr ..
 $ make flash
 ```
-
-## AVR USB Bootloader
-
-#### [USnoobie Kit](http://www.seeedstudio.com/wiki/Usnoobie_Kit)
-#### [HID-class USB Serial Communication for AVRs using V-USB](http://rayshobby.net/hid-class-usb-serial-communication-for-avrs-using-v-usb/)
