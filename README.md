@@ -3,10 +3,13 @@
 #### [GENIUS KIT STARTER PACK](http://kocoafab.cc/product/genius)
 #### ATmega328P pin mapping
 ![ATmega328P pin mapping](ATmega328P_vs_Arduino_pin_mapping.png)
-#### [Arduino Schematic](https://www.arduino.cc/en/uploads/Main/Arduino_Uno_Rev3-schematic.pdf)
+#### [Arduino Schematic](https://www.arduino.cc/en/uploads/Main/ArduinoNano30Schematic.pdf)
 #### Arduino Bootloader
 Arduino/hardware/arduino/avr/bootloaders/optiboot from [Arduino](https://github.com/arduino-org/Arduino)
-#### [Loading an Arduino Bootloader](http://blog.allthingsgeek.com/article/index/index/id/27#.VdWlNXWlxBc)
+#### [Fuse settings](http://www.martyncurrey.com/arduino-atmega-328p-fuse-settings/)
+#### [Lock bits](http://www.avrfreaks.net/forum/lock-bits-1)
+#### [Fuse calculator](http://eleccelerator.com/fusecalc/fusecalc.php?chip=atmega328p)
+#### [Bootloader setting with avrdude](http://www.hackersworkbench.com/intro-to-bootloaders-for-avr)
 
 ## AVRDUDE
 
