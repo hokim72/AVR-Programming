@@ -27,9 +27,8 @@ $ make flash
 
 ## AVR USB Bootloader
 
-#### [AVR Bootloader](http://www.electroschematics.com/10778/avr-bootloader/)
-#### [Working With Bootloaders & Build Your Own Bootloader – 1](http://www.electroschematics.com/10850/working-bootloaders-build-bootloader-1/)
-#### [Working With Bootloaders & Build Your Own Bootloader – 2](http://www.electroschematics.com/10922/working-bootloaders-build-bootloader-2/)
+#### [USnoobie Kit](http://www.seeedstudio.com/wiki/Usnoobie_Kit)
+#### [HID-class USB Serial Communication for AVRs using V-USB](http://rayshobby.net/hid-class-usb-serial-communication-for-avrs-using-v-usb/)
 
 ## AVR Definitions and Functions
 
