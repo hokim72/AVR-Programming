@@ -11,15 +11,6 @@ Arduino/hardware/arduino/avr/bootloaders/optiboot from [Arduino](https://github.
 #### [Fuse calculator](http://eleccelerator.com/fusecalc/fusecalc.php?chip=atmega328p)
 #### [Bootloader setting with avrdude](http://www.hackersworkbench.com/intro-to-bootloaders-for-avr)
 
-## AVRDUDE
-
-```
-$ wget https://copr-be.cloud.fedoraproject.org/results/jlindeberg/arduino-epel7/epel-7-x86_64/avrdude-6.1-2.fc22/avrdude-6.1-2.el7.centos.x86_64.rpm
-$ sudo yum install libftdi
-$ sudo rpm -ivh avrdude-6.1-2.el7.centos.x86_64.rpm
-$ sudo usermod -a -G dialout hokim
-```
-
 ## Prerequisite
 
 #### [AVR-Common](https://github.com/hokim72/AVR-Common)
