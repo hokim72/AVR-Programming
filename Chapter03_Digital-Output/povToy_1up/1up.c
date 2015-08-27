@@ -1,7 +1,8 @@
 #include <avr/io.h>
 #include <util/delay.h>
-#define DELAYTIME 200
+#include <avr/power.h>
 
+#define DELAYTIME 200
 
 uint8_t Star1UP[] = {
   0b10000100,
@@ -36,6 +37,8 @@ uint8_t Star1UP[] = {
 };
 
 int main(void) {
+	clock_prescale_set(clock_div_16);
+
 	uint8_t i;
 
 	DDRD = 0xff;			/* all output */

@@ -1,5 +1,6 @@
 #include <avr/io.h>
 #include <util/delay.h>
+#include <avr/power.h>
 
 
 void POVDisplay(uint8_t oneByte) {
@@ -8,6 +9,7 @@ void POVDisplay(uint8_t oneByte) {
 }
 
 int main(void) {
+	clock_prescale_set(clock_div_16);
 
 	DDRD = 0xff;	/* Set up all of LED pins for output */
 

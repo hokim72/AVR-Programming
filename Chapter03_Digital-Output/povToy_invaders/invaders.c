@@ -1,5 +1,7 @@
 #include <avr/io.h>
 #include <util/delay.h>
+#include <avr/power.h>
+
 #define DELAYTIME 200
 
 #define LED_PORT	PORTD
@@ -50,6 +52,7 @@ void POVDisplay(uint8_t povData[], uint8_t numberRows) {
 }
 
 int main(void) {
+	clock_prescale_set(clock_div_16);
 
 	LED_DDR = 0xff;			/* set all LEDs to output */
 

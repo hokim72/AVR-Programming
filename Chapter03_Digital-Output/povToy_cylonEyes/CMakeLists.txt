@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.1)
 
 set(MCU atmega328p)
-set(F_CPU 16000000UL)
+set(F_CPU 1000000UL)
 set(OPTIMIZATION s)
 set(C_STANDARD gnu99)
 
