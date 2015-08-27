@@ -3,12 +3,11 @@
 #include <avr/power.h>
 #include "USART.h"
 
-#define SAMPLE_DELAY	50	
+#define SAMPLE_DELAY	30	
 
 static inline void initFreerunningADC(void) {
 	ADMUX |= (1 << REFS0);		/* reference voltage on AVCC */
-//	ADCSRA |= (1 << ADPS1) | (1 << ADPS0);	/* ADC clock prescaler /8 */
-	ADCSRA |= (1 << ADPS2);					/* ADC clock prescaler /16 */
+	ADCSRA |= (1 << ADPS1) | (1 << ADPS0);	/* ADC clock prescaler /8 */
 
 	//ADMUX |= (1 << ADLAR);	/* left-adjust result, return only 8bits */
 
