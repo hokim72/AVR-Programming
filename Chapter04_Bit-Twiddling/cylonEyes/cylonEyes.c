@@ -1,11 +1,13 @@
 #include <avr/io.h>
 #include <util/delay.h>
+#include <avr/power.h>
 
 #define DELAYTIME 85
 #define LED_PORT PORTD
 #define LED_DDR  DDRD
 
 int main(void) {
+	clock_prescale_set(clock_div_16);
 
 	uint8_t i=0;
 	LED_DDR=0xff;	/* Data Direction Register D:

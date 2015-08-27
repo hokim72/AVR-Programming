@@ -1,9 +1,11 @@
 #include <avr/io.h>
 #include <util/delay.h>
+#include <avr/power.h>
 
 #define DELAYTIME	85
 
 int main(void) {
+	clock_prescale_set(clock_div_16);
 
 	uint8_t i;
 	DDRD = 0xff;		/* Data Direction Register B:

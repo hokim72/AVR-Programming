@@ -1,5 +1,6 @@
 #include <avr/io.h>
 #include <util/delay.h>
+#include <avr/power.h>
 
 #define DELAY 100
 
@@ -7,6 +8,7 @@ static inline uint8_t LFSR8_step(uint8_t random);
 static inline uint16_t LFSR16(uint16_t random);
 
 int main(void) {
+	clock_prescale_set(clock_div_16);
 
 	DDRD = 0xff;				/* output on all LEDs */
 	uint16_t random = 123;		/* can't init to 0, any other is ok */

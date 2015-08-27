@@ -1,9 +1,11 @@
 #include <avr/io.h>
 #include <util/delay.h>
+#include <avr/power.h>
 
 #define DELAYTIME	75
 
 int main(void) {
+	clock_prescale_set(clock_div_16);
 
 	DDRD = 0b11111111;		/* Data Direction Register D:
 							   all set up for output */
