@@ -1,7 +1,9 @@
 #include <avr/io.h> 		/* Defines pins, ports, etc */
 #include <util/delay.h>		/* Functions to wast time */
+#include <avr/power.h>
 
 int main(void) {
+	clock_prescale_set(clock_div_16);
 
 	// Inits
 	DDRD |= 0b00000001;		/* Data Direction Register D:
