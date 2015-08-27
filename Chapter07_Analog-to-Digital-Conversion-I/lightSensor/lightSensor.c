@@ -7,7 +7,7 @@
 
 static inline void initADC0(void) {
 	ADMUX |= (1 << REFS0);				/* reference voltage on AVCC */
-	ADCSRA |= (1 << ADPS2);				/* ADC clock prescaler /16 */
+	ADCSRA |= (1 << ADPS1) | (1 << ADPS0);		/* ADC clock prescaler /8 */
 	ADCSRA |= (1 << ADEN);				/* enable ADC */
 }
 
