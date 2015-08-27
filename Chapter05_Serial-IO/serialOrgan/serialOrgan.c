@@ -1,5 +1,6 @@
 #include <avr/io.h>
 #include <util/delay.h>
+#include <avr/power.h>
 #include "organ.h"
 #include "scale16.h"
 #include "USART.h"
@@ -7,6 +8,8 @@
 #define NOTE_DURATION	0xF000		/* determines long note length */
 
 int main(void) {
+	clock_prescale_set(clock_div_16);
+
 	DDRD |= (1 << PD6);		/* speaker for output */
 	initUSART();
 	printString("----- Serial Organ -----\r\n");
@@ -16,6 +19,10 @@ int main(void) {
 	const uint8_t keys[] = { 'a', 'w', 's', 'e', 'd', 'f', 't',
 		'g', 'y', 'h', 'j', 'i', 'k', 'o',
 		'l', 'p', ';', '\''
+	};
+	const uint16_t notes[] = { G4, Gx4, A4, Ax4, B4, C5, Cx5,
+		D5, Dx5, E5, F5, Fx5, G5, Gx5,
+		A5, Ax5, B5, C6
 	};
 	uint8_t isNote;
 	uint8_t i;
@@ -28,6 +35,14 @@ int main(void) {
 								/* Play Notes */
 		isNote = 0;
 		for (i=0; i<sizeof(keys); i++) {
+			if (fromCompy == keys[i]) {
+				playNote(notes[i], currentNoteLength);
+				isNote = 1;
+				break;
+			}
+		}
+
+		if (!isNote) {
 			if (fromCompy == '[') {			/* code for short note */
 				currentNoteLength = NOTE_DURATION / 2;
 			}
@@ -38,6 +53,7 @@ int main(void) {
 				rest(currentNoteLength);
 			}
 		}
+		
 	}
 
 	return (0);
