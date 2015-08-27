@@ -1,5 +1,6 @@
 #include <avr/io.h>
 #include <util/delay.h>
+#include <avr/power.h>
 #include "organ.h"
 #include "scale16.h"
 
@@ -12,6 +13,8 @@
 #define SONG_LENGTH (sizeof(song) / sizeof(uint16_t))
 
 int main(void) {
+	clock_prescale_set(clock_div_16);
+
 	const uint16_t song[] = {
 		E6, E6, E6, C6, E6, G6, G5,
 		C6, G5, E5, A5, B5, Ax5, A5,

@@ -1,7 +1,9 @@
 #include <avr/io.h>
 #include <util/delay.h>
+#include <avr/power.h>
 
 int main(void) {
+	clock_prescale_set(clock_div_16);
 
 	PORTD |= (1 << PD2);	/* initialize pullup resistor on our input pin */
 	DDRB = 0x3f;			/* set up all LEDs for output */

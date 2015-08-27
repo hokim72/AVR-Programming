@@ -1,5 +1,6 @@
 #include <avr/io.h>
 #include <util/delay.h>
+#include <avr/power.h>
 
 #define BUTTON_PORT			PORTD
 #define BUTTON_PIN			PIND
@@ -21,6 +22,8 @@ uint8_t debounce(void) {
 }
 
 int main(void) {
+	clock_prescale_set(clock_div_16);
+
 	uint8_t buttonWasPressed = 0;			/* state */
 	BUTTON_PORT |= (1 << BUTTON);			/* enable the pullup on the button */
 	LED_DDR = (1 << LED0);					/* set up LED for output */

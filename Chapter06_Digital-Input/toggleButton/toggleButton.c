@@ -1,4 +1,5 @@
 #include <avr/io.h>
+#include <avr/power.h>
 
 #define BUTTON_PORT		PORTD
 #define BUTTON			PD2
@@ -8,6 +9,8 @@
 #define LED0			PB0
 
 int main(void) {
+	clock_prescale_set(clock_div_16);
+
 	uint8_t buttonWasPressed;			/* state */
 	BUTTON_PORT |= (1 << BUTTON);		/* enable the pullup on the button */
 	LED_DDR = (1 << LED0);				/* set up LED for output */
