@@ -27,7 +27,7 @@ int main(void) {
 		loop_until_bit_is_clear(ADCSRA, ADSC);	/* wait until done */
 		adcValue = ADC;					/* read ADC in */
 							/* Have 10 bits, want 3 (eight LEDs after all) */
-		ledValue = (adcValue >> 0) & 0x03;
+		ledValue = adcValue & 0x03;
 							/* Light up all LEDs up to ledValue */
 
 		LED_PORT = 0;

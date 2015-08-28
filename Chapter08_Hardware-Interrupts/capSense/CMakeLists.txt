@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.1)
 
 set(MCU atmega328p)
-set(F_CPU 1000000UL)
+set(F_CPU 8000000UL)
 set(BAUD 9600UL)
 set(OPTIMIZATION s)
 set(C_STANDARD gnu99)
@@ -9,7 +9,7 @@ set(C_STANDARD gnu99)
 set(PROG_TYPE arduino)
 set(PROG_ARGS -P /dev/ttyUSB0 -b 115200)
 
-set(TARGET slowScope)
+set(TARGET capSense)
 
 set(CPP_FLAGS "-DF_CPU=${F_CPU} -DBAUD=${BAUD} -mmcu=${MCU}")
 set(C_FLAGS "-O${OPTIMIZATION} -g -std=${C_STANDARD} -Wall -funsigned-char -funsigned-bitfields -fpack-struct -fshort-enums -ffunction-sections -fdata-sections")
