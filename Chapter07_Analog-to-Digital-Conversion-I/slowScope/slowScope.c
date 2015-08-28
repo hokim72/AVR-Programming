@@ -27,7 +27,8 @@ int main(void) {
 	while (1) {
 		//transmitByte(ADCH);	
 		dummy = ADCH;
-		transmitByte(ADCL);	
+		dummy = ADCL;
+		transmitByte(dummy);	
 		_delay_ms(SAMPLE_DELAY);
 	}
 
