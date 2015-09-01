@@ -5,7 +5,14 @@
 ![ATmega328P pin mapping](ATmega328P_vs_Arduino_pin_mapping.png)
 #### [Arduino Schematic](https://github.com/NashMicro/NashDuino/tree/master/Nano)
 #### Arduino Bootloader
-[optiboot_atmega328.hex](https://github.com/hokim72/AVR-Common/blob/master/optiboot/optiboot_atmega328.hex)
+
+Arduino/hardware/arduino/avr/bootloaders/optiboot from [Arduino](https://github.com/arduino-org/Arduino)(512Byte)
+
+```
+avrdude -p atmega328p -c avrisp -P /dev/ttyUSB0 -b 19200 -U lfuse:w:0xff:m -U hfuse:w:0xde:m -U efuse:w:0x05:m -U flash:w:optiboot_atmega328.hex
+```
+
+[optiboot_atmega328.hex](https://github.com/hokim72/AVR-Common/blob/master/optiboot/optiboot_atmega328.hex)(1KByte)
 
 ```
 $ avrdude -p atmega328p -c avrisp -P /dev/ttyUSB0 -b 19200 -U lfuse:w:0xff:m -U hfuse:w:0xda:m -U efuse:w:0x05:m -U flash:w:optiboot_atmega328.hex
