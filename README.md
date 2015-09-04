@@ -8,8 +8,14 @@
 
 Arduino/hardware/arduino/avr/bootloaders/optiboot from [Arduino](https://github.com/arduino-org/Arduino)(512Byte)
 
+arduinoisp programmer:
 ```
-avrdude -p atmega328p -c avrisp -P /dev/ttyUSB0 -b 19200 -U lfuse:w:0xff:m -U hfuse:w:0xde:m -U efuse:w:0x05:m -U flash:w:optiboot_atmega328.hex
+$ avrdude -p atmega328p -c avrisp -P /dev/ttyUSB0 -b 19200 -U lfuse:w:0xff:m -U hfuse:w:0xde:m -U efuse:w:0x05:m -U flash:w:optiboot_atmega328.hex
+```
+
+usbasp programmer:
+```
+$  avrdude -p atmega328p -c usbasp -U lfuse:w:0xff:m -U hfuse:w:0xde:m -U efuse:w:0x05:m -U flash:w:optiboot_atmega328.hex
 ```
 
 [optiboot_atmega328.hex](https://github.com/hokim72/AVR-Common/blob/master/optiboot/optiboot_atmega328.hex)(1KByte)
