@@ -6,16 +6,16 @@
 #### [Arduino Schematic](https://github.com/NashMicro/NashDuino/tree/master/Nano)
 #### Arduino Bootloader
 
-Arduino/hardware/arduino/avr/bootloaders/optiboot from [Arduino](https://github.com/arduino-org/Arduino)(512Byte)
+Arduino/hardware/arduino/avr/bootloaders/optiboot from [Arduino](https://github.com/arduino-org/Arduino)(512Byte w/o eeprom support)
 
 ```
-$ avrdude -p atmega328p -c avrisp -P /dev/ttyUSB0 -b 19200 -U lfuse:w:0xff:m -U hfuse:w:0xde:m -U efuse:w:0x05:m -U flash:w:optiboot_atmega328.hex
+$ avrdude -p atmega328p -c usbasp -U flash:w:optiboot_atmega328.hex -U lfuse:w:0xff:m -U hfuse:w:0xd6:m -U efuse:w:0x05:m 
 ```
 
-[optiboot_atmega328.hex](https://github.com/hokim72/AVR-Common/blob/master/optiboot/optiboot_atmega328.hex)(1KByte)
+[optiboot_atmega328.hex](https://github.com/hokim72/AVR-Common/blob/master/optiboot/optiboot_atmega328.hex)(1KByte w/ eeprom support)
 
 ```
-$ avrdude -p atmega328p -c avrisp -P /dev/ttyUSB0 -b 19200 -U lfuse:w:0xff:m -U hfuse:w:0xda:m -U efuse:w:0x05:m -U flash:w:optiboot_atmega328.hex
+$ avrdude -p atmega328p -c usbasp -U flash:w:optiboot_atmega328.hex -U lfuse:w:0xff:m -U hfuse:w:0xd4:m -U efuse:w:0x05:m
 ```
 
 #### [Fuse settings](http://www.martyncurrey.com/arduino-atmega-328p-fuse-settings/)
