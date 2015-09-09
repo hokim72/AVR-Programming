@@ -1,0 +1,5 @@
+eeprom = file("myEEPROM.raw").read()
+eepromList = list(eeprom)
+eepromList =['\xff']*len(eepromList)
+eeprom="".join(eepromList)
+file("blackEEPROM.raw", "w").write(eeprom)
