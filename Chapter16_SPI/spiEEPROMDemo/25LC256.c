@@ -1,6 +1,8 @@
 #include "25LC256.h"
+#include "USART.h"
 
 void initSPI(void) {
+	SPI_PSS_PORT |= (1 << SPI_PSS);			/* If the physical SS pin is configured as input, it must be held high to ensure Master SPI operation */
 	SPI_SS_DDR |= (1 << SPI_SS);			/* set SS output */
 	SPI_SS_PORT |= (1 << SPI_SS);			/* start off not selected(high) */
 
@@ -11,7 +13,7 @@ void initSPI(void) {
 
 	/* Don't have to set phase, polarity b/c
 	   default works with 26LCxxx chips */
-	SPCR |= (1 << SPR1);		/* div 16, safer for breadboards */
+	SPCR |= (1 << SPR1) | (1 << SPR0);		/* div 16, safer for breadboards */
 	SPCR |= (1 << MSTR);		/* clockmaster */
 	SPCR |= (1 << SPE);			/* enable */
 }
